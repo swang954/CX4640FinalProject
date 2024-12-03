@@ -6,9 +6,12 @@ Title: Basis function options/choices, pros and cons of each. Include examples. 
 ## Table of Contents
 - [Overview](#Overview)
 - [Background](#Background)
-- [Penalty Function Method Overview](#Penalty-Function-Method-Overview)
-- [Common Applications](#Common-Applications)
-- [Formulation](#Formulation)
-- [Penalty Function Options](#Penalty-Function-Options)
-- [References](#References)
+- [Types of Basis Functions](#types-of-basis-functions)
+  - [Polynomial Basis](#polynomial-basis)
+  - [Orthogonal Polynomials](#orthogonal-polynomials)
+  - [Trigonometric Basis](#trigonometric-basis)
+  - [Radial Basis Functions](#radial-basis-functions)
+  - [Wavelets](#wavelets)
+- [Comparison Table](#comparison-table)
+- [References](#references)
 
