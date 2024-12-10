@@ -6,12 +6,11 @@ Title: Basis function options/choices, pros and cons of each. Include examples. 
 ## Table of Contents
 - [Overview](#Overview)
 - [Background](#Background)
-- [Types of Basis Functions](#types-of-basis-functions)
-  - [Polynomial Basis](#polynomial-basis)
-  - [Orthogonal Polynomials](#orthogonal-polynomials)
-  - [Trigonometric Basis](#trigonometric-basis)
-  - [Radial Basis Functions](#radial-basis-functions)
-  - [Wavelets](#wavelets)
+- [Polynomial Basis](#polynomial-basis)
+- [Orthogonal Polynomials](#orthogonal-polynomials)
+- [Trigonometric Basis](#trigonometric-basis)
+- [Radial Basis Functions](#radial-basis-functions)
+- [Wavelets](#wavelets)
 - [Comparison Table](#comparison-table)
 - [References](#references)
 
@@ -21,6 +20,8 @@ Basis functions are essential tools in mathematics, numerical analysis, and data
 
 ## Background
 Basis functions are simple building blocks used to represent more complex functions. The idea comes from linear algebra, where any vector can be written as a combination of basis vectors. Similarly, in function spaces, we can approximate a complicated function using a combination of simpler basis functions. This is very useful in many fields, such as solving equations, approximating curves, and analyzing data. By choosing the right set of basis functions, difficult problems become easier to solve.
+
+Polynomials were one of the first types of basis functions because they are easy to work with for calculations like addition, integration, and differentiation. However, when using high-degree polynomials, the results can become unstable. For example, Runge's phenomenon. To fix this, special types of polynomials called **orthogonal polynomials** (e.g., Legendre and Chebyshev) were developed to minimize errors. For periodic functions, trigonometric functions like sine and cosine work very well. Over time, more advanced basis functions, such as radial basis functions for scattered data and wavelets for localized signals, were created to handle a wider range of problems.
 
 
 
