@@ -85,6 +85,6 @@ Consider approximating a function $$\ f(x) = x^2 \$$ on the interval $$\[-1, 1]\
 $$\
 f(x) = \frac{2}{3} P_2(x) + \frac{1}{3} P_0(x).
 \$$
-$$
+
 
 This example shows how Legendre polynomials can be used to approximate functions efficiently. The orthogonality property ensures that the coefficients of the expansion are easy to compute, and the resulting approximation minimizes errors over the given interval.
