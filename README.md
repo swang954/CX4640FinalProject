@@ -30,5 +30,20 @@ To address these challenges, more advanced basis functions have been developed o
 ## Polynomial Basis
 Polynomial basis functions are one of the simplest and most widely used types of basis functions. They take the form $\( 1, x, x^2, x^3, \dots \)$, where each term is a power of $\ x\$. These basis functions are commonly used because they are easy to calculate, integrate, and differentiate, making them useful in a variety of applications such as curve fitting, interpolation, and Taylor series expansions. By combining these functions with coefficients, we can approximate smooth functions or model data. For example, a quadratic polynomial basis would include the terms $\ 1 \,\ x\, and  \ x^2\ $, which can approximate a parabolic curve.
 
+However, polynomial basis functions have limitations. When high-degree polynomials are used to approximate a function, they can become unstable, leading to large oscillations, especially near the edges of the interval. This problem is known as **Runge's phenomenon**. For this reason, simpler or lower-degree polynomials are often preferred, or special techniques like orthogonal polynomials (e.g., Legendre or Chebyshev polynomials) are used to minimize errors. Despite these challenges, polynomial basis functions remain fundamental in mathematics due to their simplicity and flexibility in solving many problems.
+
+Suppose we want to approximate a simple function $\ f(x) = 3x^2 + 2x + 5 \$ using a polynomial basis. Here, the polynomial basis functions are:
+
+$\[
+\phi_0(x) = 1, \quad \phi_1(x) = x, \quad \phi_2(x) = x^2.
+\]$
+
+The function $\( f(x) \)$ can then be written as a **linear combination** of these basis functions with coefficients $\( c_0 = 5 \), \( c_1 = 2 \), and \( c_2 = 3 \)$:
+
+$\[
+f(x) = c_0 \cdot \phi_0(x) + c_1 \cdot \phi_1(x) + c_2 \cdot \phi_2(x) = 5 \cdot 1 + 2 \cdot x + 3 \cdot x^2.
+\]$
+
+This example demonstrates how polynomials of increasing degree can be combined to approximate or represent functions. The coefficients $\ c_0, c_1, \$ and $\ c_2 \$ determine the contribution of each basis function.
 
 
