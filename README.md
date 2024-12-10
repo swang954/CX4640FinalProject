@@ -23,6 +23,7 @@ Basis functions are simple building blocks used to represent more complex functi
 
 Polynomials were one of the first types of basis functions because they are easy to work with for calculations like addition, integration, and differentiation. However, when using high-degree polynomials, the results can become unstable. For example, Runge's phenomenon. To fix this, special types of polynomials called **orthogonal polynomials** (e.g., Legendre and Chebyshev) were developed to minimize errors. For periodic functions, trigonometric functions like sine and cosine work very well. Over time, more advanced basis functions, such as radial basis functions for scattered data and wavelets for localized signals, were created to handle a wider range of problems.
 
-
+## Polynomial Basis
+Polynomial basis functions are one of the simplest and most widely used types of basis functions. They take the form $\( 1, x, x^2, x^3, \dots \)$, where each term is a power of $\ x\$. These basis functions are commonly used because they are easy to calculate, integrate, and differentiate, making them useful in a variety of applications such as curve fitting, interpolation, and Taylor series expansions. By combining these functions with coefficients, we can approximate smooth functions or model data. For example, a quadratic polynomial basis would include the terms $\ 1 \,\ x\, and  \ x^2\ $, which can approximate a parabolic curve.
 
 
