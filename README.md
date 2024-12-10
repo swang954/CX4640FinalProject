@@ -65,3 +65,25 @@ Some of the most well-known families of orthogonal polynomials include **Legendr
 
 The orthogonality property of these polynomials provides several advantages. For example, orthogonal polynomials simplify function approximation by ensuring minimal error with respect to the weight function. In numerical integration, Gaussian quadrature methods leverage orthogonal polynomials to achieve highly accurate approximations with fewer points. Additionally, they reduce numerical instability compared to standard polynomials, which is particularly important when approximating functions with higher degrees. Overall, orthogonal polynomials are powerful tools for solving complex mathematical problems efficiently and accurately.
 
+### Legendre polynomials
+
+Legendre polynomials are a family of orthogonal polynomials defined on the interval $$\[-1, 1]\$$ with a weight function $$\ w(x) = 1 \$$. They are widely used in mathematics and physics, especially for solving boundary value problems, approximating smooth functions, and in spectral methods for numerical solutions of differential equations. Legendre polynomials are denoted as $$\ P_n(x) \$$, where $$\ n \$$ is the degree of the polynomial. These polynomials satisfy the **orthogonality condition**:
+
+$$\
+\int_{-1}^1 P_m(x) P_n(x) \, dx = 0 \quad \text{for} \, m \neq n.
+\$$
+
+The first few Legendre polynomials are: $$\ P_0(x) = 1 \, \ P_1(x) = x \, and \ P_2(x) = \frac{1}{2}(3x^2 - 1) \$$. They are generated using **Rodrigues' formula**:
+
+$$\
+P_n(x) = \frac{1}{2^n n!} \frac{d^n}{dx^n} \left[ (x^2 - 1)^n \right].
+\$$
+
+### Example  
+Consider approximating a function $$\ f(x) = x^2 \$$ on the interval $$\[-1, 1]\$$ using Legendre polynomials. We can express $$\ f(x) \$$ as a linear combination of Legendre polynomials $$\ P_0(x) \, \ P_1(x) \, and \ P_2(x) \$$. Since $$\ P_2(x) = \frac{1}{2}(3x^2 - 1) \$$, we observe that $$\ f(x) = x^2 \$$ can be written as:
+
+$$\
+f(x) = \frac{2}{3} P_2(x) + \frac{1}{3} P_0(x).
+\$$
+
+This example shows how Legendre polynomials can be used to approximate functions efficiently. The orthogonality property ensures that the coefficients of the expansion are easy to compute, and the resulting approximation minimizes errors over the given interval.
