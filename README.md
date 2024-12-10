@@ -15,3 +15,5 @@ Title: Basis function options/choices, pros and cons of each. Include examples. 
 - [Comparison Table](#comparison-table)
 - [References](#references)
 
+## Overview
+Basis functions are essential tools in mathematics, numerical analysis, and data approximation, serving as the foundation for representing complex functions in simpler, more manageable forms. Different types of basis functions are used depending on the nature of the problem and the data involved. Polynomial basis functions, such as \(1, x, x^2, \dots\), are simple to implement but may suffer from numerical instability, especially with high degrees.
