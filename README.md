@@ -38,24 +38,24 @@ Suppose we want to approximate a simple function $$\ f(x) = 3x^2 + 2x + 5 \ $$ u
 
 The polynomial basis functions are:
 
-$$\[
+$$\
 \phi_0(x) = 1, \quad \phi_1(x) = x, \quad \phi_2(x) = x^2.
-\]$$
+\$$
 
 The function $$\ f(x) \$$ can then be written as a linear combination of these basis functions with coefficients $$\ c_0 = 5 \, \ c_1 = 2 \, and \ c_2 = 3 \$$:
 
-$$\[
+$$\
 f(x) = c_0 \cdot \phi_0(x) + c_1 \cdot \phi_1(x) + c_2 \cdot \phi_2(x) = 5 \cdot 1 + 2 \cdot x + 3 \cdot x^2.
-\]$$
+\$$
 
 This example demonstrates how polynomials of increasing degree can be combined to approximate or represent functions. The coefficients $$\ c_0, \ c_1\,  and \ c_2 \$$ determine the contribution of each basis function.
 
 ## Orthogonal Polynomials
 Orthogonal polynomials are a special class of polynomials that are mutually orthogonal with respect to a given weight function over a specific interval. Two polynomials $$\ P_m(x) \ and \ P_n(x) \$$ are considered orthogonal if their weighted inner product equals zero, that is:
 
-$$\[
-\int_a^b P_m(x) P_n(x) w(x) \, dx = 0 \quad \text{for} \, m \neq n,
-\]$$
+$$\
+\int_a^b P_m(x) P_n(x) w(x) \, dx = 0 \quad \text{for} \ m \neq n,
+\$$
 
 where $$\ w(x) \$$ is a weight function defined on the interval $$\[a, b]\$$. This orthogonality property makes these polynomials highly useful in numerical methods, such as approximation theory, solving differential equations, and performing Gaussian quadrature. Each type of orthogonal polynomial is associated with a specific weight function and domain.
 
