@@ -21,9 +21,14 @@ Basis functions are essential tools in mathematics, numerical analysis, and data
 ## Background
 Basis functions are fundamental tools in mathematics and engineering, used to approximate complex functions with simpler components. The idea comes from the concept of **linear combinations** in linear algebra, where any vector can be expressed as a sum of basis vectors. In function spaces, we use basis functions to break down a complicated function into smaller, more manageable parts. By combining these basis functions with coefficients, we can approximate curves, solve equations, and analyze data. This method is widely applied in areas like interpolation, machine learning, signal processing, and solving differential equations.
 
+The simplest and most common basis functions are **polynomials**, such as $\( 1, x, x^2, \dots \)$, which are easy to calculate, integrate, and differentiate. For smooth and well-behaved functions, polynomial basis functions provide an effective approximation. However, when using higher-degree polynomials, they can become unstable and produce large oscillations, particularly near the edges of an interval. This issue is known as **Runge's phenomenon**, and it highlights the need for better basis function choices when working with complex data or functions.
+
+To address these challenges, more advanced basis functions have been developed over time. **Orthogonal polynomials**, such as Legendre, Chebyshev, and Hermite polynomials, minimize errors and improve stability by satisfying specific mathematical properties. For periodic functions, **trigonometric basis functions**, like sine and cosine, are highly effective, as seen in Fourier series. Modern techniques, such as **radial basis functions** for scattered data and **wavelets** for localized signals, allow for more flexibility and accuracy when approximating functions in different applications. These advancements make basis functions essential tools for solving a wide range of problems in science, engineering, and data analysis.
+
 
 
 ## Polynomial Basis
 Polynomial basis functions are one of the simplest and most widely used types of basis functions. They take the form $\( 1, x, x^2, x^3, \dots \)$, where each term is a power of $\ x\$. These basis functions are commonly used because they are easy to calculate, integrate, and differentiate, making them useful in a variety of applications such as curve fitting, interpolation, and Taylor series expansions. By combining these functions with coefficients, we can approximate smooth functions or model data. For example, a quadratic polynomial basis would include the terms $\ 1 \,\ x\, and  \ x^2\ $, which can approximate a parabolic curve.
+
 
 
