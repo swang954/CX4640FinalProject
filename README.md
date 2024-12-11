@@ -15,11 +15,16 @@ Title: Basis function options/choices, pros and cons of each. Include examples. 
 - [References](#references)
 
 ## Overview
-Basis functions are essential tools in mathematics, numerical analysis, and data approximation, serving as the foundation for representing complex functions in simpler, more manageable forms. Different types of basis functions are used depending on the nature of the problem and the data involved. Polynomial basis functions, such as **$( 1, x, x^2, \dots \)$**, are simple to implement but may suffer from numerical instability, especially with high degrees. Orthogonal polynomials, like Legendre, Chebyshev, Hermite, and Laguerre polynomials, provide improved stability and error minimization but are often confined to specific domains or weight functions. Trigonometric basis functions, such as sine and cosine, excel in representing periodic functions but encounter issues like Gibbs phenomenon near discontinuities. Radial basis functions, such as Gaussian kernels, are flexible and well-suited for scattered or high-dimensional data but can become computationally expensive for large datasets. Wavelets are ideal for localized and multi-resolution analysis, effectively capturing both time and frequency information, though their implementation can be complex. Selecting the appropriate basis function involves balancing the function’s properties, numerical stability, and computational efficiency to best meet the problem’s requirements.
+Basis functions are essential tools in mathematics, numerical analysis, and data approximation, serving as the foundation for representing complex functions in simpler, more manageable forms. Different basis functions are used depending on the nature of the problem and the data involved. Polynomial basis functions, such as **$( 1, x, x^2, \dots \)$**, are simple to implement but may suffer from numerical instability, especially with high degrees. Orthogonal polynomials, like Legendre, Chebyshev, Hermite, and Laguerre polynomials, provide improved stability and error minimization but are often confined to specific domains or weight functions. Trigonometric basis functions, such as sine and cosine, excel in representing periodic functions but encounter issues like Gibbs phenomenon near discontinuities. Radial basis functions, such as Gaussian kernels, are flexible and well-suited for scattered or high-dimensional data but can become computationally expensive for large datasets. Wavelets are ideal for localized and multi-resolution analysis, effectively capturing both time and frequency information, though their implementation can be complex. Selecting the appropriate basis function involves balancing the function’s properties, numerical stability, and computational efficiency to best meet the problem’s requirements.Basis functions are essential tools in mathematics, numerical analysis, and data approximation. They serve as the foundation for representing complex functions in simpler, more manageable forms. The choice of basis function depends on the specific nature of the problem and the data involved.
 
+Polynomial basis functions, such as **$(1, x, x^2, \ldots)$**, are straightforward to implement; however, they can suffer from numerical instability, especially when dealing with high degrees. Orthogonal polynomials, including Legendre, Chebyshev, Hermite, and Laguerre polynomials, offer improved stability and error minimization but are generally limited to specific domains or weight functions.
+
+Trigonometric basis functions, such as sine and cosine, excel at representing periodic functions but may encounter issues like the Gibbs phenomenon near discontinuities. Radial basis functions, like Gaussian kernels, are flexible and particularly well-suited for scattered or high-dimensional data, though they can become computationally expensive with large datasets. 
+
+Wavelets are ideal for localized and multi-resolution analysis, effectively capturing both time and frequency information, although their implementation can be complex. When selecting the appropriate basis function, it is important to balance properties such as numerical stability and computational efficiency to meet the specific requirements of the problem at hand.
 
 ## Background
-Basis functions are fundamental tools in mathematics and engineering, used to approximate complex functions with simpler components. The idea comes from the concept of linear combinations in linear algebra, where any vector can be expressed as a sum of basis vectors. In function spaces, we use basis functions to break down a complicated function into smaller, more manageable parts. By combining these basis functions with coefficients, we can approximate curves, solve equations, and analyze data. This method is widely applied in areas like interpolation, machine learning, signal processing, and solving differential equations.
+The basis functions comes from the concept of linear combinations in linear algebra, where any vector can be expressed as a sum of basis vectors. In function spaces, we use basis functions to break down a complicated function into smaller, more manageable parts. By combining these basis functions with coefficients, we can approximate curves, solve equations, and analyze data. This method is widely applied in areas like interpolation, machine learning, signal processing, and solving differential equations.
 
 The simplest and most common basis functions are **polynomials**, such as $\( 1, x, x^2, \dots \)$, which are easy to calculate, integrate, and differentiate. For smooth and well-behaved functions, polynomial basis functions provide an effective approximation. However, when using higher-degree polynomials, they can become unstable and produce large oscillations, particularly near the edges of an interval. This issue is known as **Runge's phenomenon**, and it highlights the need for better basis function choices when working with complex data or functions.
 
@@ -66,11 +71,10 @@ Some of the most well-known families of orthogonal polynomials include **Legendr
 The orthogonality property of these polynomials provides several advantages. For example, orthogonal polynomials simplify function approximation by ensuring minimal error with respect to the weight function. In numerical integration, Gaussian quadrature methods leverage orthogonal polynomials to achieve highly accurate approximations with fewer points. Additionally, they reduce numerical instability compared to standard polynomials, which is particularly important when approximating functions with higher degrees. Overall, orthogonal polynomials are powerful tools for solving complex mathematical problems efficiently and accurately.
 
 ### Legendre polynomials
-
-Legendre polynomials are a family of orthogonal polynomials defined on the interval $$\[-1, 1]\$$ with a weight function $$\ w(x) = 1 \$$. They are widely used in mathematics and physics, especially for solving boundary value problems, approximating smooth functions, and in spectral methods for numerical solutions of differential equations. Legendre polynomials are denoted as $$\ P_n(x) \$$, where $$\ n \$$ is the degree of the polynomial. These polynomials satisfy the **orthogonality condition**:
+Legendre polynomials are a family of orthogonal polynomials defined on the interval $$\ [-1, 1]\$$ with a weight function $$\ w(x) = 1 \$$. They are widely used in mathematics and physics, particularly for solving boundary value problems, approximating smooth functions, and employing spectral methods to find numerical solutions for differential equations. Legendre polynomials are denoted as $$\ P_n(x)\$$, where $$\ n\$$ represents the degree of the polynomial. These polynomials satisfy the **orthogonality condition**:
 
 $$\
-\int_{-1}^1 P_m(x) P_n(x) \, dx = 0 \quad \text{for} \, m \neq n.
+\int_{-1}^1 P_m(x) P_n(x) \, dx = 0 \quad \text{for} \ m \neq n.
 \$$
 
 The first few Legendre polynomials are: $$\ P_0(x) = 1 \, \ P_1(x) = x \, and \ P_2(x) = \frac{1}{2}(3x^2 - 1) \$$. They are generated using **Rodrigues' formula**:
@@ -87,4 +91,56 @@ f(x) = \frac{2}{3} P_2(x) + \frac{1}{3} P_0(x).
 \$$
 
 
-This example shows how Legendre polynomials can be used to approximate functions efficiently. The orthogonality property ensures that the coefficients of the expansion are easy to compute, and the resulting approximation minimizes errors over the given interval.
+This example demonstrates how Legendre polynomials can efficiently approximate functions. The orthogonality property makes it easy to compute the expansion coefficients, and the resulting approximation minimizes errors across the given interval.
+
+### Pros:
+Legendre polynomials are orthogonal over the interval $$\[-1, 1]\$$ with a constant weight function $$\ w(x) = 1 \$$, which simplifies computations for function approximations. Their orthogonality reduces numerical errors compared to using standard polynomial bases, particularly for higher-degree approximations. Additionally, these polynomials are well-suited for approximating smooth functions over finite intervals, as they minimize the approximation error in a least-squares sense.
+
+### Cons:
+Legendre polynomials are defined specifically on the interval $$\[-1, 1]\$$, which necessitates transformations to apply them to other intervals. They have difficulty approximating functions that exhibit sharp discontinuities or rapid oscillations. Additionally, high-degree interpolations using equally spaced points can still experience oscillations, although these are generally less severe than those encountered with standard polynomials.
+
+## Chebyshev polynomials
+Chebyshev polynomials are a family of orthogonal polynomials defined on the interval $$\[-1, 1]\$$ with the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$. They are denoted as $$\ T_n(x) \$$, where $$\ n \$$ is the degree of the polynomial, and are defined using the recurrence relation:
+
+$$\
+T_0(x) = 1, \quad T_1(x) = x, \quad T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x).
+\$$
+
+Chebyshev polynomials are particularly useful in numerical analysis and approximation theory because they minimize the **maximum error** when approximating a function. This makes them ideal for polynomial interpolation and spectral methods. Unlike standard polynomials, they are less prone to **Runge's phenomenon**, a problem where high-degree polynomials oscillate excessively near the endpoints of an interval.
+
+### Example  
+
+Suppose we want to approximate the function $$\ f(x) = \frac{1}{1 + 25x^2} \$$ on the interval $$\[-1, 1]\$$. Using Chebyshev polynomials as the basis functions reduces the large oscillations that occur with standard polynomial interpolation. The Chebyshev nodes, defined as:
+
+$$\
+x_k = \cos\left( \frac{(2k + 1)\pi}{2n + 2} \right), \quad k = 0, 1, \dots, n,
+\$$
+
+are chosen to ensure the error is minimized. By constructing an interpolation polynomial using these nodes and Chebyshev polynomials $$\ T_n(x) \$$, the resulting approximation is stable and accurate, even for higher degrees. This property makes Chebyshev polynomials a powerful tool for approximating functions with complex behaviors.
+
+### Pros:
+Chebyshev polynomials effectively minimize oscillations near the edges of the interval $$\[-1, 1]\$$, a common issue in polynomial interpolation with equally spaced nodes. These polynomials are designed to minimize the maximum error in polynomial approximations, making them the best choice for approximating a function in the uniform norm. They are orthogonal with respect to the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$ on the interval $$\[-1, 1]\$$, which contributes to the numerical stability of these approximations and helps to reduce computational errors. When combined with Chebyshev nodes, Chebyshev polynomials enable highly accurate polynomial interpolation and spectral methods using fewer points.
+
+
+### Cons:
+Like other orthogonal polynomials, Chebyshev polynomials are not very effective at approximating functions that have discontinuities or sharp jumps. The trigonometric form $$\ T_n(x) = \cos(n \cdot \arccos(x)) \$$ can present computational challenges when evaluating Chebyshev polynomials for very large values of $$\ n \$$. Additionally, when applied to non-standard domains or with non-uniform weights, extra preprocessing steps may be required to appropriately adapt the Chebyshev polynomials.
+
+## Hermite Polynomials
+
+Hermite polynomials are a family of orthogonal polynomials defined on the interval $$\(-\infty, \infty)\$$ with the weight function $$\ w(x) = e^{-x^2} \$$. They are commonly used in problems involving Gaussian functions, quantum mechanics (e.g., solving the Schrödinger equation for the quantum harmonic oscillator), and numerical integration. Hermite polynomials are denoted as $$\ H_n(x) \$$, where $$\ n \$$ is the degree of the polynomial. They satisfy the recurrence relation:
+
+$$\
+H_0(x) = 1, \quad H_1(x) = 2x, \quad H_{n+1}(x) = 2xH_n(x) - 2nH_{n-1}(x).
+\$$
+
+Hermite polynomials are orthogonal with respect to the Gaussian weight $$\ e^{-x^2} \$$, ensuring stability and accuracy in approximations involving such distributions.
+
+### Example  
+
+Consider approximating the function $$\ f(x) = x^2 \$$ over the interval $$\(-\infty, \infty)\$$ using Hermite polynomials. The first few Hermite polynomials are $$\ H_0(x) = 1 \, \ H_1(x) = 2x \, and \ H_2(x) = 4x^2 - 2 \$$. By projecting $$\ f(x) = x^2 \$$ onto these polynomials, we observe that $$\ x^2 \$$ can be expressed as:
+
+$$\
+f(x) = \frac{1}{4} H_2(x) + \frac{1}{2} H_0(x).
+\$$
+
+This demonstrates how Hermite polynomials can efficiently approximate functions that are symmetric or Gaussian-like. Their orthogonality with respect to $$\ e^{-x^2} \$$ makes them particularly useful in problems involving probability distributions and physics.
