@@ -1,6 +1,6 @@
 ---
 Name: Shicheng Wang
-Topic: [26.md]
+Topic: [26]
 Title: Basis function options/choices, pros and cons of each. Include examples. Include orthogonal polynomials of multiple flavors.
 ----
 ## Table of Contents
