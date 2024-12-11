@@ -66,6 +66,7 @@ Some of the most well-known families of orthogonal polynomials include **Legendr
 The orthogonality property of these polynomials provides several advantages. For example, orthogonal polynomials simplify function approximation by ensuring minimal error with respect to the weight function. In numerical integration, Gaussian quadrature methods leverage orthogonal polynomials to achieve highly accurate approximations with fewer points. Additionally, they reduce numerical instability compared to standard polynomials, which is particularly important when approximating functions with higher degrees. Overall, orthogonal polynomials are powerful tools for solving complex mathematical problems efficiently and accurately.
 
 ### Legendre polynomials
+
 Legendre polynomials are a family of orthogonal polynomials defined on the interval $$\ [-1, 1]\$$ with a weight function $$\ w(x) = 1 \$$. They are widely used in mathematics and physics, particularly for solving boundary value problems, approximating smooth functions, and employing spectral methods to find numerical solutions for differential equations. Legendre polynomials are denoted as $$\ P_n(x)\$$, where $$\ n\$$ represents the degree of the polynomial. These polynomials satisfy the **orthogonality condition**:
 
 $$\
@@ -78,7 +79,8 @@ $$\
 P_n(x) = \frac{1}{2^n n!} \frac{d^n}{dx^n} \left[ (x^2 - 1)^n \right].
 \$$
 
-### Example  
+### Example
+
 Consider approximating a function $$\ f(x) = x^2 \$$ on the interval $$\[-1, 1]\$$ using Legendre polynomials. We can express $$\ f(x) \$$ as a linear combination of Legendre polynomials $$\ P_0(x) \, \ P_1(x) \, and \ P_2(x) \$$. Since $$\ P_2(x) = \frac{1}{2}(3x^2 - 1) \$$, we observe that $$\ f(x) = x^2 \$$ can be written as:
 
 $$\
@@ -89,9 +91,11 @@ f(x) = \frac{2}{3} P_2(x) + \frac{1}{3} P_0(x).
 This example demonstrates how Legendre polynomials can efficiently approximate functions. The orthogonality property makes it easy to compute the expansion coefficients, and the resulting approximation minimizes errors across the given interval.
 
 ### Pros:
+
 Legendre polynomials are orthogonal over the interval $$\[-1, 1]\$$ with a constant weight function $$\ w(x) = 1 \$$, which simplifies computations for function approximations. Their orthogonality reduces numerical errors compared to using standard polynomial bases, particularly for higher-degree approximations. Additionally, these polynomials are well-suited for approximating smooth functions over finite intervals, as they minimize the approximation error in a least-squares sense.
 
 ### Cons:
+
 Legendre polynomials are defined specifically on the interval $$\[-1, 1]\$$, which necessitates transformations to apply them to other intervals. They have difficulty approximating functions that exhibit sharp discontinuities or rapid oscillations. Additionally, high-degree interpolations using equally spaced points can still experience oscillations, although these are generally less severe than those encountered with standard polynomials.
 
 ## Chebyshev polynomials
@@ -113,7 +117,7 @@ $$\
 x_k = \cos\left( \frac{2k - 1}{2n} \pi \right), \quad k = 1, 2, \dots, n.
 \$$
 
-Chebyshev polynomials have several key properties that make them particularly suitable for numerical methods. They are orthogonal to the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$, which ensures stability and minimizes errors when approximating functions. Additionally, Chebyshev polynomials have the **minimax property**, meaning they minimize the maximum error in approximating a function compared to other polynomials of the same degree. This characteristic makes them especially effective in uniform approximation and helps reduce **Runge's phenomenon**, where high-degree polynomials display significant oscillations near the interval's edges.
+Chebyshev polynomials have several key properties that make them particularly suitable for numerical methods. They are orthogonal to the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$, which ensures stability and minimizes errors when approximating functions. Additionally, Chebyshev polynomials have the **minimax property**, meaning they minimize the maximum error in approximating a function compared to other polynomials of the same degree.
 
 Chebyshev polynomials are widely used in polynomial interpolation, spectral methods, and numerical integration. For interpolation, the roots of Chebyshev polynomials, known as **Chebyshev nodes**, are often utilized to decrease interpolation errors and enhance accuracy. In numerical integration, Chebyshev polynomials serve as the basis for **Gauss-Chebyshev quadrature**, which approximates integrals that involve the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$. Their trigonometric form also links them to the Fourier series, allowing for efficient approximations of smooth functions through Chebyshev expansions.
 
@@ -128,10 +132,12 @@ x_k = \cos\left( \frac{(2k + 1)\pi}{2n + 2} \right), \quad k = 0, 1, \dots, n,
 are chosen to ensure the error is minimized. By constructing an interpolation polynomial using these nodes and Chebyshev polynomials $$\ T_n(x) \$$, the resulting approximation is stable and accurate, even for higher degrees. This property makes Chebyshev polynomials a powerful tool for approximating functions with complex behaviors.
 
 ### Pros:
+
 Chebyshev polynomials effectively minimize oscillations near the edges of the interval $$\[-1, 1]\$$, a common issue in polynomial interpolation with equally spaced nodes. These polynomials are designed to minimize the maximum error in polynomial approximations, making them the best choice for approximating a function in the uniform norm. They are orthogonal with respect to the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$ on the interval $$\[-1, 1]\$$, which contributes to the numerical stability of these approximations and helps to reduce computational errors. When combined with Chebyshev nodes, Chebyshev polynomials enable highly accurate polynomial interpolation and spectral methods using fewer points.
 
 
 ### Cons:
+
 Like other orthogonal polynomials, Chebyshev polynomials are not very effective at approximating functions that have discontinuities or sharp jumps. The trigonometric form $$\ T_n(x) = \cos(n \cdot \arccos(x)) \$$ can present computational challenges when evaluating Chebyshev polynomials for very large values of $$\ n \$$. Additionally, when applied to non-standard domains or with non-uniform weights, extra preprocessing steps may be required to appropriately adapt the Chebyshev polynomials.
 
 ## Hermite Polynomials
@@ -182,10 +188,10 @@ This demonstrates how Hermite polynomials can efficiently approximate functions 
 Due to their orthogonality, Hermite polynomials are particularly effective for approximating functions that resemble Gaussian functions or exhibit exponential decay. They play a key role in Gauss-Hermite quadrature, a numerical integration technique that efficiently evaluates integrals with the weight $$\ e^{-x^2} \$$. Hermite polynomials also exhibit a property of symmetry: $$\ H_n(-x) = (-1)^n H_n(x) \$$. Specifically, even-degree polynomials are symmetric, while odd-degree polynomials are antisymmetric, which can simplify certain calculations.
 
 ### Cons:
+
 Hermite polynomials are orthogonal only for the weight $$\ e^{-x^2} \$$. For other weight functions, they are not as effective. These polynomials are defined over the infinite domain $$\ (-\infty, \infty) \$$, which makes them less useful for problems restricted to finite intervals. As the degree $$\ n \$$ increases, Hermite polynomials involve increasingly complex terms, leading to higher computational costs, especially for very large $$\ n \$$. While Hermite polynomials excel for Gaussian-like functions, they are not optimal for approximating functions with non-Gaussian behavior or sharp discontinuities.
 
 ## Trigonometric Basis  
-
 Trigonometric basis functions form the foundation for representing periodic functions, making them essential in applications such as Fourier analysis, signal processing, and solving partial differential equations. These functions are built using sine and cosine terms, which exhibit periodic behavior over a defined interval. For a given interval $$\ [-L, L]\$$, the trigonometric basis functions are defined as:
 
 $$\
@@ -214,7 +220,7 @@ a_n = \frac{1}{L} \int_{-L}^L f(x) \cos\left( \frac{n\pi x}{L} \right) \, dx, \q
 
 Trigonometric basis functions have several important properties. They are **orthogonal** on their interval, which ensures a stable and unique decomposition of periodic signals. Additionally, the smooth and periodic nature of sine and cosine functions makes them particularly effective for representing smooth, continuous, and periodic functions. The **Parseval's theorem** further highlights that the total energy of a function in the time domain equals the energy in its Fourier coefficients, which is useful for analyzing signal strength and error.
 
-Trigonometric basis functions are widely applied in solving periodic problems, such as analyzing waveforms in signal processing, solving the heat and wave equations, and decomposing functions in Fourier analysis. However, they are less effective for non-periodic functions or functions with sharp discontinuities, as they tend to produce the **Gibbs phenomenon**—an overshoot near the discontinuities. Despite this limitation, their efficiency, simplicity, and applicability to periodic problems make trigonometric basis functions indispensable in various fields of science and engineering.
+Trigonometric basis functions are widely applied in solving periodic problems, such as analyzing waveforms in signal processing, solving the heat and wave equations, and decomposing functions in Fourier analysis.
 
 ### Example   
 
@@ -256,10 +262,12 @@ f(x) \approx \sum_{n=1}^N \frac{2(-1)^{n+1}}{n\pi} \sin(n\pi x).
 This example demonstrates how a periodic function like $$\ f(x) = x \$$ can be represented as a sum of sine functions in the trigonometric basis. By increasing $$\ N \$$, the approximation becomes more accurate.
 
 ### Pros:
+
 Trigonometric basis functions, such as sine and cosine, are well-suited for representing periodic functions due to their inherent periodic nature. These functions are orthogonal over a specific interval $$\ [-L, L]\$$, which guarantees a stable and unique decomposition of functions in the Fourier series. Periodic signals can be efficiently represented using a finite number of sine and cosine terms, allowing for compact approximations in various applications. Trigonometric basis functions form the foundation of Fourier series in fields like signal processing, image compression, and solving partial differential equations. Additionally, these functions are smooth and differentiable, making them ideal for approximating smooth and continuous functions.
 
 ### Cons:
-Trigonometric basis functions are designed for periodic functions. When applied to non-periodic problems, they require modifications like extending the function periodically, which can introduce errors. When approximating functions with sharp discontinuities, the Fourier series exhibits overshoots near the discontinuities. This effect known as the **Gibbs phenomenon** causes reduced accuracy. Trigonometric basis functions work best on uniform intervals. Adapting them for non-uniform or irregular domains can add computational complexity.
+
+Trigonometric basis functions are designed for periodic functions. When applied to non-periodic problems, they require modifications like extending the function periodically, which can introduce errors. When approximating functions with sharp discontinuities, the Fourier series exhibits overshoots near the discontinuities. This effect known as the Gibbs phenomenon causes reduced accuracy. Trigonometric basis functions work best on uniform intervals. Adapting them for non-uniform or irregular domains can add computational complexity.
 
 ## References
 
