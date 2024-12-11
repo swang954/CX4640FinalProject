@@ -260,3 +260,13 @@ Trigonometric basis functions, such as sine and cosine, are well-suited for repr
 
 ### Cons:
 Trigonometric basis functions are designed for periodic functions. When applied to non-periodic problems, they require modifications like extending the function periodically, which can introduce errors. When approximating functions with sharp discontinuities, the Fourier series exhibits overshoots near the discontinuities. This effect known as the **Gibbs phenomenon** causes reduced accuracy. Trigonometric basis functions work best on uniform intervals. Adapting them for non-uniform or irregular domains can add computational complexity.
+
+## References
+
+1. Abramowitz, M., & Stegun, I. A. (1965). *Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables*. U.S. Department of Commerce, National Bureau of Standards.  
+2. Boyd, J. P. (2001). *Chebyshev and Fourier Spectral Methods* (2nd ed.). Dover Publications.  
+3. Szegő, G. (1975). *Orthogonal Polynomials* (4th ed.). American Mathematical Society.  
+4. Mason, J. C., & Handscomb, D. C. (2002). *Chebyshev Polynomials*. Chapman & Hall/CRC.  
+5. Shen, J., Tang, T., & Wang, L. L. (2011). *Spectral Methods: Algorithms, Analysis and Applications*. Springer.  
+6. Bateman, H., & Erdélyi, A. (1953). *Higher Transcendental Functions, Vol. II*. McGraw-Hill.  
+7. Boyd, J. P. (2014). Orthogonal Polynomials on the Unit Circle and Applications in Approximation Theory. *Journal of Computational Physics*, **250**, 356–374.  
