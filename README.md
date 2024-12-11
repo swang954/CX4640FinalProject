@@ -263,10 +263,12 @@ Trigonometric basis functions are designed for periodic functions. When applied 
 
 ## References
 
-1. Abramowitz, M., & Stegun, I. A. (1965). *Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables*. U.S. Department of Commerce, National Bureau of Standards.  
-2. Boyd, J. P. (2001). *Chebyshev and Fourier Spectral Methods* (2nd ed.). Dover Publications.  
-3. Szegő, G. (1975). *Orthogonal Polynomials* (4th ed.). American Mathematical Society.  
-4. Mason, J. C., & Handscomb, D. C. (2002). *Chebyshev Polynomials*. Chapman & Hall/CRC.  
-5. Shen, J., Tang, T., & Wang, L. L. (2011). *Spectral Methods: Algorithms, Analysis and Applications*. Springer.  
-6. Bateman, H., & Erdélyi, A. (1953). *Higher Transcendental Functions, Vol. II*. McGraw-Hill.  
-7. Boyd, J. P. (2014). Orthogonal Polynomials on the Unit Circle and Applications in Approximation Theory. *Journal of Computational Physics*, **250**, 356–374.  
+1. Boyd, J. P. (2001). *Chebyshev and Fourier Spectral Methods* (2nd ed.). Dover Publications.  
+2. Szegő, G. (1975). *Orthogonal Polynomials* (4th ed.). American Mathematical Society.  
+3. Mason, J. C., & Handscomb, D. C. (2002). *Chebyshev Polynomials*. Chapman & Hall/CRC.  
+4. Shen, J., Tang, T., & Wang, L. L. (2011). *Spectral Methods: Algorithms, Analysis and Applications*. Springer.    
+5. Boyd, J. P. (2014). Orthogonal Polynomials on the Unit Circle and Applications in Approximation Theory. *Journal of Computational Physics*, 250, 356–374.  
+6. Weisstein, E. W. (n.d.). Legendre Polynomials. *MathWorld–A Wolfram Web Resource*.(https://mathworld.wolfram.com/LegendrePolynomial.html).   
+7. Olver, F. W. J., Lozier, D. W., Boisvert, R. F., & Clark, C. W. (2010). *NIST Handbook of Mathematical Functions*. Cambridge University Press.  
+8. Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P. (2007). *Numerical Recipes: The Art of Scientific Computing* (3rd ed.). Cambridge University Press.  
+9. Haberman, R. (2013). *Applied Partial Differential Equations with Fourier Series and Boundary Value Problems* (4th ed.). Pearson Education.
