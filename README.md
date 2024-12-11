@@ -86,7 +86,8 @@ Legendre polynomials are orthogonal over the interval $$\[-1, 1]\$$ with a const
 
 Legendre polynomials are defined specifically on the interval $$\[-1, 1]\$$, which necessitates transformations to apply them to other intervals. They have difficulty approximating functions that exhibit sharp discontinuities or rapid oscillations. Additionally, high-degree interpolations using equally spaced points can still experience oscillations, although these are generally less severe than those encountered with standard polynomials.
 
-## Chebyshev polynomials
+### Chebyshev polynomials
+
 Chebyshev polynomials, denoted as $$\ T_n(x) \$$, are a family of orthogonal polynomials defined on the interval $$\[-1, 1]\$$ with the weight function $$\ w(x) = \frac{1}{\sqrt{1 - x^2}} \$$. These polynomials are significant in numerical analysis and approximation theory due to their unique properties. Chebyshev polynomials can be generated using a recurrence relation:
 
 $$\
@@ -127,7 +128,8 @@ Chebyshev polynomials effectively minimize oscillations near the edges of the in
 
 Like other orthogonal polynomials, Chebyshev polynomials are not very effective at approximating functions that have discontinuities or sharp jumps. The trigonometric form $$\ T_n(x) = \cos(n \cdot \arccos(x)) \$$ can present computational challenges when evaluating Chebyshev polynomials for very large values of $$\ n \$$. Additionally, when applied to non-standard domains or with non-uniform weights, extra preprocessing steps may be required to appropriately adapt the Chebyshev polynomials.
 
-## Hermite Polynomials
+### Hermite Polynomials
+
 Hermite polynomials, denoted as $$\ H_n(x) \$$, are a family of orthogonal polynomials defined on the infinite interval $$\ (-\infty, \infty) \$$ with the weight function $$\ w(x) = e^{-x^2} \$$. They are widely used in physics, particularly in quantum mechanics for solving the Schrödinger equation for the quantum harmonic oscillator, and in statistics for applications involving Gaussian distributions. Hermite polynomials satisfy the orthogonality condition:
 
 $$\
